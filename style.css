@@ -1,0 +1,19 @@
+
+.pageGrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: grey;
+    padding: 10px;
+    margin-top: 60px;
+}
+
+.grid-item{
+    padding: 20px;
+    border: 2px solid black;
+    height: 70vh;
+}
+
+
+
+
+
