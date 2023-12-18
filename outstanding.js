@@ -1,10 +1,13 @@
 
 const grid2 = document.querySelector(".grid2");
+
 grid2.style.width = "50vw";
 grid2.style.display = "flex";
+grid2.style.overflow = "hidden";
 grid2.style.justifyContent = "center";
 grid2.style.alignItems = "flex-end";
 grid2.style.position = "relative";
+
 const gridContainer = document.createElement("div");
 gridContainer.style.display = "flex";
 gridContainer.style.width = "70%";
