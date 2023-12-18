@@ -1,14 +1,11 @@
+import * as newTask from './newTask.js';
 
-import {task, details, dueDate, priority, clearFields, enter} from './newTask.js';
-
-
-export default function clearData(){
-
-    clearFields.addEventListener("click", ()=> {
+export default function clearData() {
+    newTask.clearFields.addEventListener("click", () => {
         console.log("clear!!!!");
-       task.textContent = "";
-       details.textContent  = "";
-       dueDate.textContent  = "";
-       priority.textContent = "";
+        newTask.task.value     = "";
+        newTask.details.value  = "";
+        newTask.dueDate.value  = "";
+        newTask.priority.value = "";
     });
-};
+}; 
