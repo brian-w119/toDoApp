@@ -3,10 +3,9 @@ import defaultState from './defaultPage.js';
 import {grid1} from './defaultPage.js';
 
 export default function newTask(){
-
+    
     const createTask = document.querySelector("#createNewToDo");
     createTask.addEventListener("click", ()=> {
-        
         
         const task = createField();
         task.type = "text";
@@ -49,6 +48,29 @@ export default function newTask(){
         priority.style.marginTop = "30px";
         priority.placeholder = "Low / Medium / High";
         grid1.appendChild(priority);
+
+        const container = document.createElement("div");
+
+        const enter = document.createElement("button");
+        //enter.style.display = "block";
+        enter.style.height  = "60px";
+        enter.style.color   = "white";
+        enter.textContent   = "Enter";
+        enter.style.marginTop = "60px";
+        enter.style.backgroundColor = "green";
+        container.appendChild(enter);
+
+        const clearFields = document.createElement("button");
+        clearFields.style.height  = "60px";
+        clearFields.style.color   = "white";
+        clearFields.textContent   = "Clear";
+        clearFields.style.marginTop = "60px";
+        clearFields.style.backgroundColor = "green";
+        container.appendChild(clearFields);
+
+        container.style.display = "flex";
+        container.style.justifyContent = "space-evenly";
+        grid1.appendChild(container);
     });
 };
 
