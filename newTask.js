@@ -74,6 +74,7 @@ export default function newTask(){
         clearFields.style.backgroundColor = "green";
         container.appendChild(clearFields);
 
+        container.style.marginTop = "80px";
         container.style.display = "flex";
         container.style.justifyContent = "space-evenly";
         grid1.appendChild(container);
