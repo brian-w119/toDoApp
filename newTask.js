@@ -2,24 +2,36 @@
 import defaultState from './defaultPage.js';
 import {grid1} from './defaultPage.js';
 
+const task = createField();
+const details = createField();
+const dueDate = createField();
+const priority = createField();
+const clearFields = document.createElement("button");
+const enter = document.createElement("button");
+
+export{task, details, dueDate, priority, clearFields, enter};
+
+
+
 export default function newTask(){
     
     const createTask = document.querySelector("#createNewToDo");
     createTask.addEventListener("click", ()=> {
         
+        //div to hold the input fields
+        const inputDiv = document.createElement("div");
+        inputDiv.style.marginTop = "60px";
+        
         //creation and styling of TITLE field
-        const task = createField();
         task.type = "text";
-        task.name = "task";
+        task.name = "title";
         task.size = "30";
         task.placeholder   = "Title";
         task.style.display = "block";
-        task.style.marginTop = "10vw";
         task.style.textAlign = "center";
-        grid1.appendChild(task);
+        inputDiv.appendChild(task);
 
         //creation and styling of DETAILS field
-        const details = createField();
         details.type  = "text";
         details.name  = "details";
         details.placeholder   = "Enter Details";
@@ -32,18 +44,16 @@ export default function newTask(){
         details.maxLength    = "100";
         details.style.textAlign = "center";
         details.style.wordBreak = "break-word";
-        grid1.appendChild(details);
+        inputDiv.appendChild(details);
         
         //creation and styling of DUE DATE field
-        const dueDate = createField();
         dueDate.type  = "date";
         dueDate.name  = "date";
         dueDate.width = "50px";
         dueDate.style.marginTop = "30px";
-        grid1.appendChild(dueDate);
+        inputDiv.appendChild(dueDate);
         
         //creation and styling of PRIORITY field
-        const priority = createField();
         priority.type  = "text";
         priority.name  = "priority";
         priority.width = "50px";
@@ -51,13 +61,14 @@ export default function newTask(){
         priority.style.textAlign = "center";
         priority.style.marginTop = "30px";
         priority.placeholder = "Low / Medium / High";
-        grid1.appendChild(priority);
+        inputDiv.appendChild(priority);
+
+        grid1.appendChild(inputDiv);
 
         //div to house ENTER and CLEAR buttons
         const container = document.createElement("div");
         
         //creation and styling of ENTER button
-        const enter = document.createElement("button");
         enter.style.height  = "60px";
         enter.style.color   = "white";
         enter.textContent   = "Enter";
@@ -66,7 +77,6 @@ export default function newTask(){
         container.appendChild(enter);
 
         //creation and styling of CLEAR button
-        const clearFields = document.createElement("button");
         clearFields.style.height  = "60px";
         clearFields.style.color   = "white";
         clearFields.textContent   = "Clear";
