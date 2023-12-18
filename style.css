@@ -1,7 +1,7 @@
 
 .pageGrid{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 30% auto;
     background-color: grey;
     padding: 10px;
     margin-top: 60px;
@@ -12,7 +12,6 @@
     border: 2px solid black;
     height: 70vh;
 }
-
 
 
 
