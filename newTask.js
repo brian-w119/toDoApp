@@ -11,8 +11,6 @@ const enter = document.createElement("button");
 
 export{task, details, dueDate, priority, clearFields, enter};
 
-
-
 export default function newTask(){
     
     const createTask = document.querySelector("#createNewToDo");
