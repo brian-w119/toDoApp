@@ -18,8 +18,8 @@ export default function defaultState(){
     const grid2 = document.querySelector(".grid2");
     const outstanding = document.createElement("h2");
     outstanding.textContent = "OUTSTANDING";
-   // outstanding.style.position = "relative";
-   // outstanding.style.top = "0px";
+    outstanding.style.position = "absolute";
+    outstanding.style.top = "0px";
     outstanding.style.justifyContent = "center";
     outstanding.style.color = "white";
     grid2.appendChild(outstanding);
