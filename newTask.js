@@ -9,13 +9,14 @@ const priority = createField();
 const clearFields = document.createElement("button");
 const enter = document.createElement("button");
 
+
 export{task, details, dueDate, priority, clearFields, enter};
 
 export default function newTask(){
     
     const createTask = document.querySelector("#createNewToDo");
     createTask.addEventListener("click", ()=> {
-        
+
         //div to hold the input fields
         const inputDiv = document.createElement("div");
         inputDiv.style.marginTop = "60px";

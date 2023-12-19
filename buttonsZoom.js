@@ -1,15 +1,21 @@
 
-import Buttons from './zoomClass.js';
 
-export default function buttonHover(){
-    const eachButton = document.querySelectorAll("button");
-    for(const button of eachButton){
-        const btn = new Buttons(button);
-        btn.buttonResize();
+import {enter, clearFields} from './newTask.js';
+import { createTask } from './defaultPage.js';
+
+const buttons = [enter, clearFields, createTask];
+
+export default function sizeChange(){
+
+    for(let i = 0; i < buttons.length; i++){
+        buttons[i].addEventListener("mouseover", () => {
+            buttons[i].style.transform = "scale(1.1)";
+        });
+        buttons[i].addEventListener("mouseout", () => {
+            buttons[i].style.transform = "scale(1)";
+        });
     };
-
 };
-
-
+ 
 
 
