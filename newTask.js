@@ -1,5 +1,5 @@
 
-import defaultState from './defaultPage.js';
+import defaultState, { createTask } from './defaultPage.js';
 import {grid1} from './defaultPage.js';
 
 const task = createField();
@@ -89,6 +89,14 @@ export default function newTask(){
         grid1.appendChild(container);
     });
 };
+
+//disables New Task button whilst a class is in progress
+function disableEnableButton(){
+    createTask.addEventListener("click", () => {
+        createTask.disabled = true;
+    });
+};
+disableEnableButton();
 
 function createField(){
     return document.createElement("input");
