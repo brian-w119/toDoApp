@@ -1,13 +1,15 @@
 
-import {clearFields, enter, task} from './newTask.js';
+import Buttons from './zoomClass.js';
 
-const buttons = [enter, task. clearFields];
-
-export default function zoom(){
-    for(let i = 0; i < buttons.length; i++){
-        buttons[i].addEventListener("mouseover", ()=> {
-            buttons[i].style.transform = "scale(1.3)";
-        });
+export default function buttonHover(){
+    const eachButton = document.querySelectorAll("button");
+    for(const button of eachButton){
+        const btn = new Buttons(button);
+        btn.buttonResize();
     };
+
 };
+
+
+
 

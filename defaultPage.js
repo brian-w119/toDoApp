@@ -1,19 +1,19 @@
 
 
 export const grid1 = document.querySelector(".grid1");
+export const createTask = document.createElement("button");
 
 export default function defaultState(){
 
-    const newTask = document.createElement("button");
-    newTask.id = "createNewToDo";
-    newTask.style.width = "120px";
-    newTask.style.height = "40px";
-    newTask.style.backgroundColor = "blue";
-    newTask.style.color = "white";
-    newTask.textContent = "+ New Task";
-    newTask.style.marginTop = "10px";
+    createTask.id = "createNewToDo";
+    createTask.style.width = "120px";
+    createTask.style.height = "40px";
+    createTask.style.backgroundColor = "blue";
+    createTask.style.color = "white";
+    createTask.textContent = "+ New Task";
+    createTask.style.marginTop = "10px";
    // const grid1 = document.querySelector(".grid1");
-    grid1.appendChild(newTask);
+    grid1.appendChild(createTask);
 
     const grid2 = document.querySelector(".grid2");
     const outstanding = document.createElement("h2");
@@ -25,7 +25,7 @@ export default function defaultState(){
     grid2.appendChild(outstanding);
 };
 
-//export {grid1};
+
 
 
 
