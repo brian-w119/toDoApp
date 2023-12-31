@@ -7,11 +7,5 @@ export default function saveData(){
     enter.addEventListener("click", ()=> {
         (task.value);
          
-
-
     });
-
-
-
-
 };
