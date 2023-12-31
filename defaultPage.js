@@ -1,5 +1,4 @@
 
-
 export const grid1 = document.querySelector(".grid1");
 export const createTask = document.createElement("button");
 
@@ -24,12 +23,3 @@ export default function defaultState(){
     outstanding.style.color = "white";
     grid2.appendChild(outstanding);
 };
-
-
-
-
-
-
-
-
-

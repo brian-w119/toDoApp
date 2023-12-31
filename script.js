@@ -4,17 +4,11 @@ import newTask from './newTask.js';
 import clearData from './clearFields.js';
 import displayOld from './outstanding.js';
 import sizeChange from './buttonsZoom.js';
+import saveData from './captureData.js';
 
 defaultState();
 newTask();
 clearData();
 displayOld();
 sizeChange();
-
-
-
-
-
-
-
-
+saveData();

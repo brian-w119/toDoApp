@@ -1,5 +1,3 @@
-
-
 import {enter, clearFields} from './newTask.js';
 import { createTask } from './defaultPage.js';
 
@@ -16,6 +14,3 @@ export default function sizeChange(){
         });
     };
 };
- 
-
-

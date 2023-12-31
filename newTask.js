@@ -25,6 +25,7 @@ export default function newTask(){
         task.type = "text";
         task.name = "title";
         task.size = "30";
+        task.value = "";
         task.placeholder   = "Title";
         task.style.display = "block";
         task.style.textAlign = "center";
@@ -33,6 +34,7 @@ export default function newTask(){
         //creation and styling of DETAILS field
         details.type  = "text";
         details.name  = "details";
+        details.value = "";
         details.placeholder   = "Enter Details";
         details.style.display = "block";
         details.style.marginTop = "30px";
@@ -48,6 +50,7 @@ export default function newTask(){
         //creation and styling of DUE DATE field
         dueDate.type  = "date";
         dueDate.name  = "date";
+        dueDate.value = "";
         dueDate.width = "50px";
         dueDate.style.marginTop = "30px";
         inputDiv.appendChild(dueDate);
@@ -56,6 +59,7 @@ export default function newTask(){
         priority.type  = "text";
         priority.name  = "priority";
         priority.width = "50px";
+        priority.value = "";
         priority.style.display = "block";
         priority.style.textAlign = "center";
         priority.style.marginTop = "30px";
