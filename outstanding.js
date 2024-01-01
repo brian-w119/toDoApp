@@ -15,9 +15,9 @@ gridContainer.style.justifyContent = "space-around";
 gridContainer.style.gap = "20px";
 
 
-const column1 = createColumns();
-const column2 = createColumns();
-const column3 = createColumns();
+const column1 = createNewDiv();
+const column2 = createNewDiv();
+const column3 = createNewDiv();
 
 export {column1, column2, column3};
 
@@ -38,6 +38,7 @@ export default function displayOld(){
     heading1.style.backgroundColor = "blue";
     heading1.textContent = "PRIORITY LOW";
     heading1.style.textAlign = "center";
+    heading1.style.marginBottom = "10px";
     heading1.style.color = "white";
     heading1.style.fontWeight = "bold";
 
@@ -53,6 +54,7 @@ export default function displayOld(){
     heading2.style.backgroundColor = "orange";
     heading2.textContent = "PRIORITY  MEDIUM";
     heading2.style.textAlign = "center";
+    heading2.style.marginBottom = "10px";
     heading2.style.color = "black";
     heading2.style.fontWeight = "bold";
 
@@ -68,6 +70,7 @@ export default function displayOld(){
     heading3.style.backgroundColor = "RED";
     heading3.textContent = "PRIORITY HIGH";
     heading3.style.textAlign = "center";
+    heading3.style.marginBottom = "10px";
     heading3.style.color = "black";
     heading3.style.fontWeight = "bold";
 
@@ -78,6 +81,8 @@ export default function displayOld(){
 
 grid2.appendChild(gridContainer);
 
-function createColumns(){
+function createNewDiv(){
    return  document.createElement("div");
 };
+
+export {createNewDiv};

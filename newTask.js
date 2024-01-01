@@ -2,7 +2,7 @@
 import defaultState, { createTask } from './defaultPage.js';
 import {grid1} from './defaultPage.js';
 
-const task = createField();
+const task = createField(); //field for title
 const details = createField();
 const dueDate = createField();
 const priority = createField();
@@ -28,7 +28,7 @@ export default function newTask(){
         task.value = "";
         task.placeholder   = "Title";
         task.style.display = "block";
-        task.style.textAlign = "center";
+        task.style.textAlign = "left";
         inputDiv.appendChild(task);
 
         //creation and styling of DETAILS field
@@ -43,7 +43,7 @@ export default function newTask(){
         details.style.width  = "300px";
         details.style.height = "50px";
         details.maxLength    = "100";
-        details.style.textAlign = "center";
+        details.style.textAlign = "left";
         details.style.wordBreak = "break-word";
         inputDiv.appendChild(details);
         
@@ -61,9 +61,10 @@ export default function newTask(){
         priority.width = "50px";
         priority.value = "";
         priority.style.display = "block";
-        priority.style.textAlign = "center";
+        priority.style.textAlign = "left";
         priority.style.marginTop = "30px";
         priority.placeholder = "Low / Medium / High";
+
         inputDiv.appendChild(priority);
 
         grid1.appendChild(inputDiv);

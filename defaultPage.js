@@ -1,9 +1,10 @@
 
 export const grid1 = document.querySelector(".grid1");
-export const createTask = document.createElement("button");
+
+export let createTask = document.createElement("button");
 
 export default function defaultState(){
-
+    
     createTask.id = "createNewToDo";
     createTask.style.width = "120px";
     createTask.style.height = "40px";
